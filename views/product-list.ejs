@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./layout/head'); %>
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="/images/logo.jfif" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+
+<body>
+
+    <%- include('./layout/header'); %>
+
+
+        <main role="main">
+
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">MOTO BIKE</h1>
+
+                </div>
+            </div>
+
+
+            <div class="container" style="text-align: center;">
+                <div class="row">
+                    <%products.forEach(function(product) { %>
+                        <%- include('product-one', {product: product}); %>
+                            <% }); %>
+                </div>
+            </div>
+        </main>
+
+
+</body>
+<script>
+    var soluong = 0;
+    var somon = 0;
+    var danhsachGioHang = {};
+
+    function updateServerCART(tenMon, soluong) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                //document.getElementById("demo").innerHTML
+                console.log(this.responseText);
+            }
+        };
+        xhttp.open("GET", "/session/setOne?item=" + tenMon + "&num=" + soluong, true);
+        xhttp.send();
+    }
+
+    function add_to_cart(maMon, tenMon) {
+        danhsachGioHang[maMon] = (danhsachGioHang[maMon] | 0) + 1;
+        updateServerCART(tenMon, danhsachGioHang[maMon]);
+        soluong++;
+        somon = Object.keys(danhsachGioHang).length;
+        pt = document.getElementById("somonhang");
+        pt.textContent = "" + somon + " , " + soluong;
+        console.log(danhsachGioHang);
+    }
+</script>
+
+</html>

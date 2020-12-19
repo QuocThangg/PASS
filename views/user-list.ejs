@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+      <%- include('./layout/head'); %> 
+    </head>
+
+    <body>
+    
+    <%- include('./layout/header'); %> 
+    
+	<main role="main">
+
+        <div class="jumbotron">
+			<div class="container">
+			  <h1 class="display-3">USERs</h1>
+			  
+			</div>
+		</div>
+
+
+        <div class="container" style="text-align: center;" >
+                    <%users.forEach(function(user) { %>
+						<HR>
+						<div class="row">
+                        <p> <%- user.username %> </p>
+                        <br>
+						            <p> <%- user.password %> </p>
+						</div>
+                    <% }); %>
+                
+        </div>
+    </main>
+          
+
+    </body>
+</html> 

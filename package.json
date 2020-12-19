@@ -1,0 +1,28 @@
+{
+  "name": "W06.01-Data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.8",
+    "multer": "^1.4.2",
+    "qrcode": "^1.4.4",
+    "qrcode-svg": "^1.1.0",
+    "session-file-store": "^1.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}

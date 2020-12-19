@@ -1,0 +1,54 @@
+/// B1. Create "project"
+/// 	npm  init  -y
+/// B2. INSTALL
+/// 	npm install express  body-parser  cookie-parser multer ejs mongodb mongoose  express-session cookie-session qrcode  qrcode-svg  --save
+/// B3. RUN - server
+/// 	node   index.js
+
+
+****************************************
+- Kết nối DB sử dụng:
+    mongodb mongoose
+
+Khai báo Model -- tương ứng "table" trong DB 
+    mongoose.Schema
+    mongoose.model
+
+
+### Mongoose models -  CRUD operations
+
+Model.deleteMany()
+Model.deleteOne()
+Model.find()
+Model.findById()
+Model.findByIdAndDelete()
+Model.findByIdAndRemove()
+Model.findByIdAndUpdate()
+Model.findOne()
+Model.findOneAndDelete()
+Model.findOneAndRemove()
+Model.findOneAndReplace()
+Model.findOneAndUpdate()
+Model.replaceOne()
+Model.updateMany()
+Model.updateOne()
+
+### Query:
+https://docs.mongodb.com/manual/reference/operator/query-comparison/
+
+Name	Description
+$eq	Matches values that are equal to a specified value.
+$gt	Matches values that are greater than a specified value.
+$gte	Matches values that are greater than or equal to a specified value.
+$in	Matches any of the values specified in an array.
+$lt	Matches values that are less than a specified value.
+$lte	Matches values that are less than or equal to a specified value.
+$ne	Matches all values that are not equal to a specified value.
+$nin	Matches none of the values specified in an array.
+
+
+###
+https://mongoosejs.com/docs/2.7.x/docs/query.html
+
+
+    

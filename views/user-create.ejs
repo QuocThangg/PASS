@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+      <%- include('./layout/head'); %> 
+    </head>
+
+    <body>
+    
+    <%- include('./layout/header'); %> 
+    
+	<main role="main">
+
+        <div class="jumbotron">
+			<div class="container">
+			  <h1 class="display-3">Create a new User</h1>
+			  
+			</div>
+		</div>
+
+
+        <div class="container" >
+            <h1 class="display-3">GET</h1>
+			<form action="" method="GET">
+				<div class="form-group">
+				  <label for="username">Email address</label>
+				  <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+				  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+				  <label for="password">Password</label>
+				  <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="repassword">re-Password</label>
+                    <input type="password" class="form-control" id="repassword" name="repassword">
+                </div>
+				<button type="submit" class="btn btn-primary">Create</button>
+			 </form>
+            
+            
+            <h1 class="display-3">POST</h1>
+			<form action="" method="POST">
+				<div class="form-group">
+				  <label for="username">Email address</label>
+				  <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+				  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+				  <label for="password">Password</label>
+				  <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="repassword">re-Password</label>
+                    <input type="password" class="form-control" id="repassword" name="repassword">
+                </div>
+				<button type="submit" class="btn btn-primary">Create</button>
+			 </form>
+			
+                    
+                
+        </div>
+    </main>
+          
+
+    </body>
+</html> 
